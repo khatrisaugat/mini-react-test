@@ -1,1 +1,1 @@
-export const API_URL: String = "https://graphqlzero.almansi.me/api";
+export const API_URL: string = "https://graphqlzero.almansi.me/api";

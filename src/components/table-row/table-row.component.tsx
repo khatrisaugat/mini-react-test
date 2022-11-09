@@ -1,16 +1,20 @@
 import "./table-row.styles.css";
 import Checkbox from "./../checkbox/checkbox.component";
+import userEvent from "@testing-library/user-event";
 type Props = {};
-function TableRow(Props: { isHeader?: boolean }) {
+function TableRow(Props: { isHeader?: boolean; user?: any }) {
+  const { isHeader, user } = Props;
   return (
-    <div className={`table-row ${Props.isHeader ? "header-row" : ""}`}>
-      <Checkbox />
-      <div className="table-cell">Name</div>
-      <div className="table-cell">Username</div>
-      <div className="table-cell">Email</div>
-      <div className="table-cell">Phone</div>
-      <div className="table-cell">Website</div>
-      <div className="table-cell">Address</div>
+    <div className={`table-row ${isHeader ? "header-row" : ""}`}>
+      <Checkbox checkAll={isHeader} />
+      <div className="table-cell">{isHeader ? "Name" : user.name}</div>
+      <div className="table-cell">{isHeader ? "Username" : user.username}</div>
+      <div className="table-cell">{isHeader ? "Email" : user.email}</div>
+      <div className="table-cell">{isHeader ? "Phone" : user.phone}</div>
+      <div className="table-cell">{isHeader ? "Website" : user.website}</div>
+      <div className="table-cell">
+        {isHeader ? "Address" : user.address.street}
+      </div>
     </div>
   );
 }
