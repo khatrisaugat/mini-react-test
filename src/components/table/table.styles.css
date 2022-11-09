@@ -1,0 +1,11 @@
+.table {
+  display: flex;
+  position: relative;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  max-width: 100vw;
+  min-width: 950px;
+  padding: 5px 10px;
+  margin: 5px 10px;
+  box-sizing: border-box;
+}

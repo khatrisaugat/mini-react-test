@@ -1,0 +1,26 @@
+.table-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 5px 10px;
+  margin: 5px 10px;
+  border-bottom: 1.5px solid #ccc;
+  box-shadow: 0px 1px 0px #e0e5eb;
+}
+.header-row {
+  background-color: #eef1f7;
+  font-weight: 600;
+  font-size: 13px;
+}
+.table-cell {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 80%;
+  flex: 1;
+  min-width: 105px;
+  overflow-wrap: break-word;
+  padding: 5px 10px;
+  margin: 5px 10px;
+  font-size: 14px;
+}
