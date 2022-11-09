@@ -8,7 +8,6 @@ function App() {
   const [search, setSearch] = useState("");
   const handleChange = (search: string) => {
     setSearch(search);
-    console.log("search", search);
   };
   return (
     <div className="App">
